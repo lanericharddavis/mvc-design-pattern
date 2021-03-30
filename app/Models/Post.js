@@ -2,6 +2,6 @@
 export default class Post {
   constructor(body) {
     this.body = body;
-    this.date = Date.now();
+    this.date = new Date().toLocaleDateString("en-Us"); //  returns local date ex. 3/30/21
   }
 }
