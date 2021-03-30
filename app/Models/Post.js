@@ -1,0 +1,1 @@
+//NOTE an object that holds all information for the data needed per object
