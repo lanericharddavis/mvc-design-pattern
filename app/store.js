@@ -2,7 +2,9 @@
 // the store holds all of the models based on the data provided
 
 //The state holds all the data (THIS IS PRIVATE)
-let _state = {};
+let _state = {
+  posts: []
+};
 
 
 class Store {

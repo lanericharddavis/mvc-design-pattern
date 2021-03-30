@@ -5,4 +5,9 @@ export default class PostController {
   constructor() {
     console.log("Building Controller")
   }
+
+  createPost() {
+    console.log("creating the post");
+    PostService.createPost();
+  }
 }
