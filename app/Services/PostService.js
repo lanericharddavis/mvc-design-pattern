@@ -4,8 +4,10 @@ import Store from "../store.js";
 
 
 class PostService {
-  constructor() {
-    console.log("Creating Service");
+
+  delete(id) {
+    let postIndex = Store.State.posts.findIndex(post => post.id == id)
+    Store.State.posts.splice(postIndex, 1);
   }
 
   createPost(rawData) {

@@ -29,6 +29,12 @@ export default class PostController {
       body: formData.body.value
     }
     PostService.createPost(rawPost);
+    formData.reset()
+    _draw();
+  }
+
+  delete(id) {
+    PostService.delete(id);
     _draw();
   }
 }
