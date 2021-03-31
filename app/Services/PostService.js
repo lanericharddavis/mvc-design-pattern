@@ -8,13 +8,13 @@ class PostService {
     console.log("Creating Service");
   }
 
-  createPost() {
+  createPost(rawData) {
     console.log("creating post from the service")
-    let newPost = new Post("new Post")
+    let newPost = new Post(rawData)
     // Could put      Store.State.posts.push(post); 
     //But this is Bad Habit to directly push or directly change the state
     // Insteat do this
-    let posts = [...Store.State.posts, post];
+    let posts = [...Store.State.posts, newPost];
     Store.commit('posts', posts);
   }
 }

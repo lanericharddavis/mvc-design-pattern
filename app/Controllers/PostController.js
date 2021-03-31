@@ -22,9 +22,13 @@ export default class PostController {
     _draw();
   }
 
-  createPost() {
-    console.log("creating the post");
-    PostService.createPost();
+  createPost(event) {
+    event.preventDefault();
+    let formData = event.target;
+    let rawPost = {
+      body: formData.body.value
+    }
+    PostService.createPost(rawPost);
     _draw();
   }
 }
